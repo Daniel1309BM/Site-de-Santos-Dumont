@@ -59,4 +59,4 @@ Este site foi desenvolvido com finalidade **educacional**, com o intuito de apre
 
 ## 👨‍💻 Autor
 
-Projeto desenvolvido para fins acadêmicos.
+Projeto desenvolvido para fins acadêmicos. Desevolvido por Arthur Noronha, Ana Julia G. , Anna Beatriz M. , Daniel Bertoldin e Denis Vieira. Alunos da ETEC Prof. Adhemar Batista Heméritas, Curso 2º Infonet
