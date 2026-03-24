@@ -1,0 +1,1161 @@
+/* ===============================================*/
+/* HERO SECTION STYLES */
+/* ===============================================*/
+
+/* apply vibrant deep navy gradient to whole page */
+body {
+  background: linear-gradient(135deg, #040b1a 0%, #0a1a3e 40%, #1a3a6e 100%);
+  background-attachment: fixed;
+  color: #fff;
+}
+
+#hero-section {
+  background: 
+    radial-gradient(
+      circle at center,
+      rgba(26, 58, 110, 0.2) 0%,
+      rgba(10, 26, 62, 0.5) 50%,
+      rgba(4, 11, 26, 0.8) 100%
+    ),
+    url(../build/assets/img/Stars.png) center top / cover no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-attachment: fixed;
+}
+
+#hero-section::after {
+  display: none;
+}
+
+.hero-section-wrapper {
+  padding: 60px 0 45px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  padding: 30px 15px;
+  border-radius: 12px;
+  position: relative;
+  z-index: 15;
+}
+
+.hero-title {
+  color: #E5B84D ;
+  font-size: 42px;
+  font-weight: 700;
+  margin: 15px 0;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  color: #fff;
+  font-size: 28px;
+  margin: 12px 0;
+  font-weight: 300;
+}
+
+.hero-description {
+  color: #bbb;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+/* ===============================================*/
+/* NAV MENU - BLUE BLUR EFFECT */
+/* ===============================================*/
+
+
+.navbar .navbar-nav .nav-link {
+  background: #032064c5 !important; /* azul escuro mais discreto */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: none !important; /* remove borda do bootstrap */
+  box-shadow: #040b1a;
+
+  border-radius: 30px;
+  padding: 6px 18px !important;
+  margin: 0 6px;
+
+  transition: background 0.3s ease;
+}
+
+/* Hover: apenas escurece levemente */
+.navbar .navbar-nav .nav-link:hover {
+  background: rgba(5, 15, 40, 0.45) !important;
+  box-shadow: #040b1a;
+}
+/* HERO BUTTON STYLES */
+/* ===============================================*/
+
+
+
+.hero-btn {
+  background-color: transparent;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-top: 22px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.hero-btn:hover {
+  background-color: #FFD700;
+  color: #012A67;
+}
+
+
+/* ===============================================*/
+/* RESPONSIVE STYLES */
+/* ===============================================*/
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero-content {
+    padding: 40px 20px;
+  }
+
+  .hero-nav-links a {
+    margin: 0 10px;
+    font-size: 12px;
+  }
+
+  .gallery-wraper {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-nav-links a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero-btn {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+}
+
+/* ===============================================*/
+/* TIMELINE STYLES (GRID - center column for icons) */
+/* ===============================================*/
+
+/* timeline boxes match general boxed gradient */
+.timeline-content {
+  background: linear-gradient(180deg, #10183a 0%, #0b1f4e 100%);
+}
+
+/* comparison and legacy sections also use gradient backgrounds */
+.comparison-box,
+.legacy-box {
+  background: linear-gradient(180deg, #10183a 0%, #0b1f4e 100%);
+}
+
+
+/* ============================================*/
+/* Timeline Section */
+.timeline-section {
+  padding-top: 100px !important;
+  padding-bottom: 60px !important;
+  position: relative;
+  z-index: 10;
+}
+
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  background: linear-gradient(to bottom, rgba(255,215,0,0.06), rgba(255,215,0,0.02));
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 15px;
+  align-items: start;
+  margin-bottom: 25px;
+}
+
+.timeline-col {
+  min-height: 1px;
+}
+
+.timeline-col.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-icon {
+  width: 14px;
+  height: 14px;
+  background: #FFD700;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(187, 175, 129, 0.06);
+  z-index: 25;
+}
+
+.timeline-col.left {
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+}
+
+.timeline-col.right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+}
+
+.timeline-col.left .timeline-content {
+  text-align: right;
+}
+
+.timeline-col.right .timeline-content {
+  text-align: left;
+}
+
+.timeline-content {
+  display: block;
+  background: rgba(7,18,36,0.6);
+  border: 1px solid rgba(255,215,0,0.06);
+  padding: 18px 22px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(2,8,20,0.5);
+  max-width: 440px;
+  width: 100%;
+}
+
+.timeline-image {
+  margin: 10px 0;
+  text-align: center;
+}
+.timeline-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.timeline-date {
+  display: inline-block;
+  background: #0a1a3e;
+  color: #FFD700;
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 11px;
+  margin-bottom: 6px;
+  border: 1px solid rgba(255,215,0,0.08);
+  -webkit-touch-callout: none; /* disable context menu */
+  user-select: none; /* prevent selection */
+}
+
+.timeline-content h4 {
+  color: #FFD700;
+  margin: 5px 0 8px 0;
+  font-size: 16px;
+}
+
+.timeline-content p {
+  color: #c7d1dd;
+  margin: 0;
+  font-size: 12px;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  transition: transform 220ms ease;
+  box-shadow: 0 18px 40px rgba(2,8,20,0.6);
+}
+
+/* mobile: stack content and keep icon centered between them */
+@media (max-width: 768px) {
+  .timeline-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: stretch;
+  }
+
+  .timeline-col.left {
+    order: 1;
+  }
+
+  .timeline-col.center {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timeline-col.right {
+    order: 3;
+  }
+
+  .timeline-content {
+    max-width: 100%;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .timeline::before {
+    left: 50%;
+  }
+}
+
+/* FLIGHT SCIENCE / PRINCÍPIOS AERODINÂMICOS */
+/* ===============================================*/
+.flight-science {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.flight-science .eyebrow {
+  color: #FFD700;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.flight-science .section-title {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.flight-science p {
+  color: #c7d1dd;
+  font-size: 13px;
+}
+
+.flight-science .boxed.large {
+  background: linear-gradient(180deg, rgba(7,18,36,0.6), rgba(6,14,30,0.55));
+  border-radius: 14px;
+  padding: 22px;
+  height: 350px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(2,8,20,0.6);
+  margin: 0 auto;
+}
+
+h5 {
+  color: #FFD700;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.flight-science .boxed.large img {
+  max-width: 480px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.flight-science .boxed.large:hover {
+  transform: translateY(-5px);
+  transition: transform 220ms ease;
+  box-shadow: 0 24px 60px rgba(2,8,20,0.5);
+}
+
+.flight-science .boxed.small {
+  position: relative;
+  padding: 15px 15px 15px 70px;
+  margin: 0 auto 15px auto;
+  border-radius: 12px;
+  background: rgba(7,18,36,0.35);
+  border: 1px solid #ffd90041;
+  box-shadow: 0 10px 30px rgba(2,8,20,0.45);
+  max-width: 450px;
+}
+
+.boxed.small:hover {
+  transform: translateY(-5px);
+  transition: transform 220ms ease;
+  border: 1px solid #FFD700;
+}
+
+.flight-science .boxed.small .icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(2,8,20,0.5);
+}
+
+.flight-science .boxed.small .icon i {
+  color: #fff;
+  font-size: 18px;
+}
+
+.flight-science .boxed.small p {
+  margin: 0;
+  color: #fff; /* keep text white */
+  font-size: 13px;
+}
+/* color indicators applied to icon backgrounds */
+.flight-science .sustentation .icon { background: linear-gradient(180deg,#2bd08c,#1e8f63); }
+.flight-science .weight .icon { background: linear-gradient(180deg,#ff7b7b,#c84a4a); }
+.flight-science .thrust .icon { background: linear-gradient(180deg,#6fb8ff,#2b78d1); }
+.flight-science .drag .icon { background: linear-gradient(180deg,#ffd08a,#d68b1e); }
+
+@media (max-width: 992px) {
+  .flight-science .boxed.large { min-height: 320px; }
+}
+
+@media (max-width: 768px) {
+  .flight-science .boxed.large { min-height: 220px; padding: 18px; }
+  .flight-science .boxed.small { padding-left: 20px; }
+  
+}
+
+/* navbar colour after scroll */
+.navbar {
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+.navbar.scrolled {
+  background-color: rgba(10,16,40,0.8) !important; /* blend, 80% opacity */
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.high-contrast .navbar {
+  background-color: #000 !important;
+  border-bottom: 2px solid #fff !important;
+}
+
+.high-contrast .navbar.scrolled {
+  background-color: #000 !important;
+}
+
+/* smooth scroll courtesy of JS fallback */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===============================================*/
+/* Life of Santos Dumont*/
+
+.life-section .eyebrow.text-center.mb-2 {
+  color: #FFD700;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+h2.section-title {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.life-section img  {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(2,8,20,0.5);
+  margin: 0 auto;
+}
+
+.life-content,
+.fourteen-bis-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.life-text,
+.fourteen-bis-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+
+
+
+/* ===============================================*/
+
+/* FOURTEEN-BIS SECTION */
+.fourteen-bis .eyebrow.text-center.mb-2 {
+    color: #FFD700;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+
+.flight-science .boxed.large {
+   background: linear-gradient(180deg, #10183a 0%, #0b1f4e 100%);
+   border: 1px solid #FFD700;
+   box-shadow: 0 15px 35px rgba(2, 8, 20, 0.6);
+   padding: 15px;
+   color: #ffffff;
+   font-size: 30px;
+   font-weight: 800;
+   margin-bottom: 6px;
+ }
+
+.fourteen-bis-main-img,
+.life-main-img {
+    width: 680px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 30px !important;
+    border: 3px solid #FFD700 !important;
+    box-shadow: 0 10px 30px rgba(2,8,20,0.5) !important;
+    transition: all 0.3s ease !important;
+}
+
+.fourteen-bis-main-img:hover,
+.life-main-img:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: #ffea00 !important;
+  box-shadow: 0 20px 45px rgba(255, 215, 0, 0.3) !important;
+}
+
+
+
+
+/* ===============================================*/
+/* GLOBAL IMAGE STYLES */
+/* ===============================================*/
+
+/* Aplica o estilo de borda amarela e sombra em hover para imagens principais */
+.timeline-image img,
+.demoiselle-img,
+.fourteen-bis img,
+.life-section img,
+.historical-flight-img,
+.flight-science .boxed.large img {
+  border: 1px solid #FFD700;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(2, 8, 20, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.timeline-image img:hover,
+.demoiselle-img:hover,
+.fourteen-bis img:hover,
+.life-section img:hover,
+.fourteen-bis-main-img:hover,
+.historical-flight-img:hover,
+.flight-science .boxed.large img:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #ffea00;
+  box-shadow: 0 20px 45px rgba(255, 215, 0, 0.3);
+}
+
+/* ===============================================*/
+/* BOXED ELEMENTS */
+/* ===============================================*/
+
+.boxed {
+  /* vibrant navy gradient with deeper depth */
+  background: linear-gradient(180deg, #0a1a3e 0%, #040b1a 100%);
+  padding: 15px;
+  border-radius: 8px;
+  color: #fffcfc;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.boxed.large {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #1a3a6e 0%, #0a1a3e 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.boxed.large img {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+
+.boxed.small {
+  font-size: 11px;
+  border: #FFD700 solid 1px ;
+  background: linear-gradient(180deg, #0a1a3e 0%, #040b1a 100%);
+  transition: all 0.3s ease;
+}
+
+.boxed.small:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+  border-color: #ffea00;
+}
+
+
+
+.stat-box {
+  /* base removed - replaced by boxed.small rules */
+  padding: 10px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+/* styled similarly to flight-science cards */
+.stat-box {
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #0a1a3e 0%, #040b1a 100%);
+  border: 1px solid #FFD700;
+  box-shadow: 0 10px 30px rgba(2,8,20,0.45);
+  transition: all 0.3s ease;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+  border-color: #ffea00;
+}
+
+.stat-box i {
+  color: #FFD700;
+  font-size: 20px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.stat-box strong {
+  font-size: 1.1rem;
+  color: #FFD700;
+}
+
+/* distinct colour accents for each stat */
+.stat-box.envergadura .icon { background: linear-gradient(180deg,#6fb8ff,#2b78d1); }
+.stat-box.peso .icon       { background: linear-gradient(180deg,#ff7b7b,#c84a4a); }
+.stat-box.motor .icon      { background: linear-gradient(180deg,#ffd08a,#d68b1e); }
+.stat-box.velocidade .icon { background: linear-gradient(180deg,#2bd08c,#1e8f63); }
+
+.historical-flight-img {
+  max-width: 400px !important;
+  margin: 0 auto 20px auto !important;
+}
+
+.flight-steps {
+  list-style: none;
+  padding: 0;
+  color: #bbb;
+  font-size: 16px;
+  display: inline-block;
+  text-align: left;
+}
+
+.flight-steps-container {
+  text-align: center;
+}
+
+.flight-steps li {
+  margin-bottom: 6px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.flight-steps li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: #FFD700;
+}
+
+/* ===============================================*/
+/* COMPARISON BOXES */
+/* ===============================================*/
+
+.comparison-box {
+  /* match appearance of envergadura/stat-box items */
+  position: relative;
+  padding: 18px 18px 18px 65px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #0a1a3e 0%, #040b1a 100%);
+  border: 1px solid rgba(255,215,0,0.03);
+  box-shadow: 0 10px 30px rgba(2,8,20,0.45);
+  color: #fff;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.comparison-box .icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(2,8,20,0.5);
+}
+
+.comparison-box .icon i {
+  color: #fff;
+  font-size: 18px;
+}
+
+.comparison-box h4 {
+  color: #FFD700;
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.comparison-box ul {
+  list-style: none;
+  padding: 0;
+  color: #bbb;
+  font-size: 14px;
+}
+
+.comparison-box ul li {
+  margin-bottom: 6px;
+}
+
+/* ===============================================*/
+
+/* ===============================================*/
+/* LEGACY SECTION */
+/* ===============================================*/
+
+/* make columns in legacy section equal height */
+.legacy .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.legacy .col-md-4 {
+  display: flex;
+}
+.legacy-box {
+  flex: 1 1 auto;
+  height: 100%;
+  background: linear-gradient(180deg, #0a1a3e 0%, #040b1a 100%);
+  padding: 18px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.legacy-box h5 {
+  color: #FFD700;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.legacy-quote {
+  font-style: italic;
+  color: #ccc;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+/* Demoiselle image styling */
+.demoiselle-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  border-radius: 30px;
+  /* raise a bit to sit between right-hand boxes */
+  position: relative;
+  top: -50px;
+}
+.demoiselle-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.5);
+}
+
+
+/* ===============================================*/
+/* MEDIA QUERIES FOR NEW SECTIONS */
+@media (max-width: 992px) {
+  .timeline-item,
+  .comparison-box,
+  .stat-box,
+  .boxed.large {
+    width: 100% !important;
+    left: 0 !important;
+    text-align: left !important;
+  }
+  .timeline:before {
+    left: 20px;
+  }
+  .timeline-icon {
+    left: 20px;
+  }
+}
+
+
+/* ===============================================*/
+/* FOOTER STYLES */
+/* ===============================================*/
+
+.footer-section {
+  background: linear-gradient(to top, #040b1a 0%, #0a1a3e 100%);
+  padding: 30px 0;
+  position: relative;
+  z-index: 5;
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.footer-left {
+  text-align: center;
+}
+
+.footer-title {
+  color: #FFD700;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-text {
+  color: #bbb;
+  font-size: 13px;
+  margin: 4px 0;
+  line-height: 1.6;
+}
+
+.footer-right {
+  text-align: center;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-icon {
+  color: #FFD700;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #fff;
+  transform: scale(1.15);
+}
+
+/* Removido media query redundante do footer */
+
+/* ===============================================*/
+/* SCROLL TO TOP BUTTON */
+/* ===============================================*/
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFD700 !important; /* Amarelo Ouro Moderno */
+  color: #0a1a3e !important;
+  border: none;
+  cursor: pointer;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4); /* Sombra amarela suave */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 999999 !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.scroll-to-top:hover {
+  background-color: #ffea00 !important;
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
+}
+
+/* ===============================================*/
+/* FOOTER SOCIAL ICONS */
+/* ===============================================*/
+
+.social-links .social-icon {
+  color: #FFD700 !important; /* Amarelo para os ícones */
+  font-size: 22px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links .social-icon:hover {
+  color: #fff !important;
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+}
+
+/* ===============================================*/
+/* HIGH CONTRAST MODE */
+/* ===============================================*/
+
+.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast body {
+  background: #000 !important;
+  background-attachment: fixed;
+}
+
+.high-contrast #hero-section {
+  background: 
+    radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(../build/assets/img/Stars\ \(1\).png) center top / cover no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+.high-contrast #hero-section::after {
+  background: #000 !important;
+}
+
+.high-contrast .navbar {
+  background-color: #000 !important;
+  border-bottom: 2px solid #fff !important;
+}
+
+.high-contrast .navbar.scrolled {
+  background-color: #000 !important;
+}
+
+
+.high-contrast .hero-title,
+.high-contrast .hero-subtitle,
+.high-contrast .section-title,
+.high-contrast h2,
+.high-contrast h4,
+.high-contrast h5 {
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+.high-contrast p,
+.high-contrast span,
+.high-contrast li {
+  color: #fff !important;
+}
+
+.high-contrast .boxed,
+.high-contrast .legacy-box,
+.high-contrast .comparison-box,
+.high-contrast .timeline-content,
+.high-contrast .stat-box {
+  background: #000 !important;
+  border: 2px solid #fff !important;
+  box-shadow: none !important;
+}
+
+.high-contrast .hero-btn {
+  background: #000 !important;
+  border: 2px solid #fff !important;
+  color: #fff !important;
+}
+
+.high-contrast .hero-btn:hover {
+  color: #000 !important;
+}
+
+.high-contrast .timeline::before {
+  background: #fff !important;
+}
+
+.high-contrast .timeline-icon {
+  background: #fff !important;
+  box-shadow: none !important;
+  border: 2px solid #000;
+}
+
+.high-contrast .timeline-date {
+  background: #fff !important;
+  color: #000 !important;
+  border: 2px solid #000 !important;
+}
+
+.high-contrast .footer-section {
+  background: #000 !important;
+  border-top: 2px solid #fff !important;
+}
+
+.high-contrast .social-icon {
+  color: #fff !important;
+}
+
+.high-contrast .navbar-brand img {
+  border: none !important;
+  filter: none !important;
+}
+
+.high-contrast img {
+  filter: grayscale(100%) contrast(150%) !important;
+  border: 2px solid #fff !important;
+}
+
+.high-contrast .scroll-to-top {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #000 !important;
+  box-shadow: none !important;
+}
+
+.high-contrast .contrast-toggle {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #000 !important;
+  box-shadow: none !important;
+}
+
+/* ===============================================*/
+/* CONTRAST TOGGLE BUTTON */
+/* ===============================================*/
+
+.contrast-toggle {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFD700 !important;
+  color: #0a1a3e !important;
+  border: none;
+  cursor: pointer;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 999999 !important;
+}
+
+.contrast-toggle:hover {
+  background-color: #ffea00 !important;
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
+}
+
+@media (max-width: 576px) {
+  .contrast-toggle {
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
